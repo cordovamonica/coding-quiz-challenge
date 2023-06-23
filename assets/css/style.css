@@ -4,7 +4,7 @@ body {
 }
 
 .heading {
-    margin: 10px;
+    margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
     font-size: x-large;
@@ -16,4 +16,19 @@ body {
 
 .timer {
     text-align: right;
+}
+
+.score-button {
+    background-color: rgb(237, 214, 248);
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(237, 214, 248);
+}
+
+.intro {
+    text-align: center;
+    font-size: large;
 }
