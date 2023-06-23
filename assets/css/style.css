@@ -1,0 +1,19 @@
+body {
+    font-family: "Arial";
+    background-color: #f3f7f9
+}
+
+.heading {
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+}
+
+.scoreboard {
+    text-align: left;
+}
+
+.timer {
+    text-align: right;
+}
