@@ -22,9 +22,10 @@ body {
     background-color: rgb(237, 214, 248);
 }
 
-.start-button {
+#start-button {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(237, 214, 248);
 }
 
