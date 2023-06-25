@@ -1,34 +1,35 @@
+/* This sets the styling for items in the body */
 body {
     font-family: "Arial";
     background-color: #f3f7f9
 }
-
+/* Formats the heading */
 .heading {
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
     font-size: x-large;
 }
-
+/* sets style for the scores section */
 .scoreboard {
     text-align: left;
 }
-
+/* sets style for the timer section */
 .timer {
     text-align: right;
 }
-
+/* styles the scores button */
 .score-button {
     background-color: rgb(237, 214, 248);
 }
-
+/* styles the start button */
 #start-button {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(237, 214, 248);
 }
-
+/* formats the intro paragraph */
 .intro {
     text-align: center;
     font-size: large;
