@@ -1,9 +1,18 @@
 
-function countDown(num) {
-    for (var i = num; i > 0; i--) {
-      console.log(i);
-    }
-  }
+var startButtonEl = document.querySelector("#start-button");
+var timerEl = document.querySelector("countdown");
+var count = 40;
+var countEl = document.querySelector("#count")
+
+function setCounter() {
+  countEl.textContent = count;
+}
+
+startButtonEl.addEventListener("click", function() {
+  count--;
+  setCounter();
+});
+
 
   var questions = [
     { 
@@ -44,3 +53,4 @@ function countDown(num) {
     },
     correctAnswer: 'a'
   }];
+
