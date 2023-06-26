@@ -2,19 +2,13 @@
 var startButtonEl = document.querySelector("#start-button");
 var timerEl = document.querySelector("countdown");
 var count = 40;
-var countEl = document.querySelector("#count")
-
-function setCounter() {
-  countEl.textContent = count;
-}
-
-startButtonEl.addEventListener("click", function() {
-  count--;
-  setCounter();
-});
-
-
-  var questions = [
+var countEl = document.querySelector("#count");
+var nextButton = document.querySelector("#next-button");
+var quiz = document.querySelector("questions");
+var questionCount = 0;
+var penalty = 10;
+var seconds = 0;
+var questions = [
     { 
       question: "Common datatypes do NOT include",
     answers: {
@@ -53,4 +47,14 @@ startButtonEl.addEventListener("click", function() {
     },
     correctAnswer: 'a'
   }];
+
+  function setTimer() {
+    countEl.textContent = count;
+  }
+  
+  startButtonEl.addEventListener("click", function() {
+    count--;
+    setTimer();
+  });
+
 
