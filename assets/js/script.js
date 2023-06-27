@@ -61,4 +61,12 @@ startButtonEl.addEventListener("click", function() {
   setTimer();
 });
 
+loadQuiz();
 
+function loadQuiz() {
+    options.innerText = questions[currentQuestion].question;
+    a_text.innerText = answers[currentQuestion].a;
+    b_text.innerText = questions[currentQuestion].b;
+    c_text.innerText = questions[currentQuestion].c;
+    d_text.innerText = questions[currentQuestion].d;
+  } 
