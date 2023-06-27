@@ -5,7 +5,9 @@ var count = 40;
 var countEl = document.querySelector("#count");
 var nextButton = document.querySelector("#next-button");
 var quiz = document.querySelector("questions");
-var questionCount = 0;
+var options = document.querySelector("#quiz-options");
+var optionButton = document.querySelector("option-button");
+var currentQuestion = 0;
 var penalty = 10;
 var seconds = 0;
 var questions = [
@@ -23,7 +25,9 @@ var questions = [
     question: "A variable is a named container that allows us to store data in our code",
     answers: {
       a: "true",
-      b: "false"
+      b: "false",
+      c: "both",
+      d: "neither"
     },
     correctAnswer: 'a'
   },
@@ -48,13 +52,13 @@ var questions = [
     correctAnswer: 'a'
   }];
 
-  function setTimer() {
-    countEl.textContent = count;
-  }
-  
-  startButtonEl.addEventListener("click", function() {
-    count--;
-    setTimer();
-  });
+function setTimer() {
+  countEl.textContent = count;
+}
+
+startButtonEl.addEventListener("click", function() {
+  count--;
+  setTimer();
+});
 
 

@@ -34,3 +34,10 @@ body {
     text-align: center;
     font-size: large;
 }
+
+#quiz-options {
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    height: 30px;
+}
