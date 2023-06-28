@@ -80,11 +80,11 @@ startTimer();
 
 function showQuestion() {
   var question = questions[currentQuestion];
-  quiz.textContent = question.question;
-  answerA.textContent = question.answers.a;
-  answerB.textContent = question.answers.b;
-  answerC.textContent = question.answers.c;
-  answerD.textContent = question.answers.d;
+  quiz.textContent = questions.question;
+  answerA.textContent = questions.answers.a;
+  answerB.textContent = questions.answers.b;
+  answerC.textContent = questions.answers.c;
+  answerD.textContent = questions.answers.d;
 }
 
 function checkAnswer(answer) {
@@ -124,6 +124,11 @@ answerD.addEventListener("click", function() {
   checkAnswer("d");
 }
 );
+
+
+
+
+
 
 
 
