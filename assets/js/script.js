@@ -7,6 +7,10 @@ var nextButton = document.querySelector("#next-button");
 var quiz = document.querySelector("questions");
 var options = document.querySelector("#quiz-options");
 var optionButton = document.querySelector("option-button");
+var answerA = document.querySelector("#a");
+var answerB = document.querySelector("#b");
+var answerC = document.querySelector("#c");
+var answerD = document.querySelector("#d");
 var currentQuestion = 0;
 var penalty = 10;
 var seconds = 0;
@@ -52,21 +56,38 @@ var questions = [
     correctAnswer: 'a'
   }];
 
+function startTimer() {
+  count = 40;
+  var timer = setInterval(function() {
+    count--;
+    setTimer();
+    if (count === 0) {
+      clearInterval(timer);
+      alert("Time's up!");
+    }
+  }, 1000);
+}
+
 function setTimer() {
   countEl.textContent = count;
 }
 
-startButtonEl.addEventListener("click", function() {
-  count--;
-  setTimer();
-});
+function startQuiz() {
+  startTimer();
+  showQuestion();
+}
+startTimer();
 
-loadQuiz();
+function showQuestion() {
+  var question = questions[currentQuestion];
+  quiz.textContent = question.question;
+  answerA.textContent = question.answers.a;
+  answerB.textContent = question.answers.b;
+  answerC.textContent = question.answers.c;
+  answerD.textContent = question.answers.d;
+}
 
-function loadQuiz() {
-    options.innerText = questions[currentQuestion].question;
-    a_text.innerText = answers[currentQuestion].a;
-    b_text.innerText = questions[currentQuestion].b;
-    c_text.innerText = questions[currentQuestion].c;
-    d_text.innerText = questions[currentQuestion].d;
-  } 
+
+
+
+
