@@ -45,3 +45,16 @@ body {
 #next-button {
     margin-top: 80px;
 }
+
+#initials-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#final-score {
+    margin-top: 10px;
+}
+
+
+

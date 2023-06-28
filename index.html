@@ -10,10 +10,7 @@
 <body>
     <!-- created a heading for the page -->
     <div class="heading">Coding Quiz Challenge</div>
-    <!-- added a section for the scores -->
-    <div class="scoreboard">High Scores</div>
-    <!-- a button to see the scores -->
-    <button class="score-button">See High Scores</button>
+
     <!-- added a section for the timer -->
     <div class="timer">Timer:<span id="count">40</span></div>
 
@@ -31,6 +28,23 @@
         </ul>
     <button id="next-button">Next</button>
     
+    <!-- added a form for the initials -->
+    <form id="initials-form">
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" name="initials" placeholder="Your initials here">
+        <input type="submit" value="Submit">
+    </form>
+    <!-- added a section for the final score -->
+    <div class="final-score">Your final score is: <span id="final-score"></span></div>
+    <!-- added a section for the high scores -->
+    <div class="high-scores">High Scores</div>
+    <!-- added a button to clear the high scores -->
+    <button class="clear-button">Clear High Scores</button>
+    <!-- added a button to go back to the start -->
+    <button class="go-back-button">Go Back</button>
+    <!-- added a button to play again -->
+    <button class="play-again-button">Play Again</button>
+
 <!-- linked the javascript file -->
 <script src="./assets/js/script.js" ></script>
 </body>

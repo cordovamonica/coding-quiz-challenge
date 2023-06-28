@@ -87,6 +87,43 @@ function showQuestion() {
   answerD.textContent = question.answers.d;
 }
 
+function checkAnswer(answer) {
+  var question = questions[currentQuestion];
+  if (question.correctAnswer === answer) {
+    alert("Correct!");
+  } else {
+    alert("Wrong!");
+    count -= penalty;
+  }
+  currentQuestion++;
+  if (currentQuestion === questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+  }
+}
+
+function endQuiz() {
+  alert("Quiz complete!");
+}
+
+startButtonEl.addEventListener("click", startQuiz);
+answerA.addEventListener("click", function() {
+  checkAnswer("a");
+}
+);
+answerB.addEventListener("click", function() {
+  checkAnswer("b");
+}
+);
+answerC.addEventListener("click", function() {
+  checkAnswer("c");
+}
+);
+answerD.addEventListener("click", function() {
+  checkAnswer("d");
+}
+);
 
 
 
