@@ -47,12 +47,12 @@ var count = 40;
 var countEl = document.querySelector("#count");
 var nextButton = document.querySelector("#next-button");
 var quiz = document.querySelector("questions");
-var options = document.querySelector("#quiz-options");
+var answers = document.querySelector("#quiz-options");
 var optionButton = document.querySelector("option-button");
-var answerA = document.querySelector("#a");
-var answerB = document.querySelector("#b");
-var answerC = document.querySelector("#c");
-var answerD = document.querySelector("#d");
+var answerA = document.querySelector("#answerA");
+var answerB = document.querySelector("#answerB");
+var answerC = document.querySelector("#answerC");
+var answerD = document.querySelector("#answerD");
 var currentQuestion = 0;
 var penalty = 10;
 var seconds = 0;
@@ -83,11 +83,12 @@ startTimer();
 function showQuestion() {
   var question = questions[currentQuestion];
   quiz.textContent = questions.question;
-  answerA.textContent = questions.answers.a;
-  answerB.textContent = questions.answers.b;
-  answerC.textContent = questions.answers.c;
-  answerD.textContent = questions.answers.d;
+  answerA.textContent = questions.answers[0];
+  answerB.textContent = questions.answers[1];
+  answerC.textContent = questions.answers[2];
+  answerD.textContent = questions.answers[3];
 }
+showQuestion();
 
 function checkAnswer(answer) {
   var question = questions[currentQuestion];
