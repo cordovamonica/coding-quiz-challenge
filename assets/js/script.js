@@ -1,4 +1,5 @@
 
+//set questions, answers, and correct answers
 var questions = [
   { 
     question: "Common datatypes do NOT include",
@@ -40,7 +41,7 @@ var questions = [
   ],
   correctAnswer: "a. quotations"
 }];
-
+//linking to the class ids in the html
 var startButtonEl = document.querySelector("#start-button");
 var timerEl = document.querySelector("countdown");
 var count = 40;
@@ -57,7 +58,7 @@ var currentQuestion = 0;
 var penalty = 10;
 var seconds = 0;
 
-
+//timer
 function startTimer() {
   count = 40;
   var timer = setInterval(function() {
@@ -73,13 +74,13 @@ function startTimer() {
 function setTimer() {
   countEl.textContent = count;
 }
-
+//start quiz
 function startQuiz() {
   startTimer();
   showQuestion();
 }
 startTimer();
-
+//show questions
 function showQuestion() {
   var question = questions[currentQuestion];
   quiz.textContent = questions.question;
@@ -89,7 +90,7 @@ function showQuestion() {
   answerD.textContent = questions.answers[3];
 }
 showQuestion();
-
+//check answers
 function checkAnswer(answer) {
   var question = questions[currentQuestion];
   if (question.correctAnswer === answer) {
@@ -105,11 +106,11 @@ function checkAnswer(answer) {
     showQuestion();
   }
 }
-
+//end quiz
 function endQuiz() {
   alert("Quiz complete!");
 }
-
+//event listeners for buttons
 startButtonEl.addEventListener("click", startQuiz);
 answerA.addEventListener("click", function() {
   checkAnswer("a");

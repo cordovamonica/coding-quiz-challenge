@@ -34,24 +34,24 @@ body {
     text-align: center;
     font-size: large;
 }
-
+/* formats the quiz questions */
 #quiz-options {
     display: flex;
     flex-direction: column;
     width: 10px;
     height: 30px;
 }
-
+/* formats the next button */
 #next-button {
     margin-top: 80px;
 }
-
+/* formats the initials form */
 #initials-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/* formats the final score */
 #final-score {
     margin-top: 10px;
 }
