@@ -7,7 +7,7 @@ This quiz will help review concepts of JavaScript by putting them to use in a co
 Has options for answers, timer, a place to submit scores
 
 # Deployed Application
-["Coding Quiz Challenge"](https://github.com/cordovamonica/coding-quiz-challenge)
+["Coding Quiz Challenge"](https://cordovamonica.github.io/coding-quiz-challenge/)
 
 # Screenshots
 ![Overview](./assets/overview%20of%20quiz.png)
